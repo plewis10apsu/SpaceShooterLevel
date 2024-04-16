@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://mlr8jrnww76s"]
+
+[ext_resource type="PackedScene" uid="uid://8wlng5j7gxyb" path="res://scenes/enemy.tscn" id="1_l85wj"]
+[ext_resource type="Texture2D" uid="uid://pc0fa1cgvnse" path="res://assets/textures/Asteroid sprite 128px.png" id="2_sq46o"]
+
+[node name="MedEnemy" instance=ExtResource("1_l85wj")]
+speed = 150
+hp = 2
+points = 200
+
+[node name="Asteroid" parent="." index="0"]
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("2_sq46o")
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(1.37, 1.37)

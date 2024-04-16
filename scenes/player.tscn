@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvt2liyu3nvqe"]
+
+[ext_resource type="Texture2D" uid="uid://dxqekew8pdy4n" path="res://assets/textures/rocket sprite.png" id="1_abpfd"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_wkucl"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_wkucl")
+speed = 400
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_abpfd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -32, -8, -10, -9, 9, -7, 16, -10, 22, -3, 20, -1, 26, 3, 20, 8, 23, 7, 16, 9, 9, 9, -10)
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(0, -41)
